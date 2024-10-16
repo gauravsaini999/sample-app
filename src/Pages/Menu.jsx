@@ -34,7 +34,7 @@ const Menu = () => {
     }, [mouseOver]);
 
     return (
-        <div style={{ display: "flex", flexDirection: "row", gap: "20px", justifyContent: "space-evenly" }}>
+        <div style={{ display: "flex", flexDirection: "row", gap: "20px", justifyContent: "space-evenly", marginTop: '60px' }}>
             <div {...props}>
                 <h3>{"Input Handling using State & Refs"}</h3>
             </div>
