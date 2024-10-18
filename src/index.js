@@ -4,9 +4,9 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import ErrorPage from './Pages/ErrorPage';
-import InputHandling from './Pages/InputHandlingUsingRefs&State/InputHandling';
+import InputHandling from './Pages/InputHandling';
 import Home from './Pages/Home';
-import App from './App';
+import TimerPage from './Pages/TimerPage';
 
 
 const router = createBrowserRouter([
@@ -25,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "inputhandling",
         element: <InputHandling />
+      },
+      {
+        path: "timerpage",
+        element: <TimerPage />
       }
     ]
   }])

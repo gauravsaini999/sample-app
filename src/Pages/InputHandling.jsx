@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { useNavigate, Outlet } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const InputHandling = () => {
     const navigate = useNavigate();
