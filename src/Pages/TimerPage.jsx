@@ -12,7 +12,7 @@ const TimerPage = () => {
             <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
                 {times.map((time, index) => {
                     return (
-                        <div key={index} style={{ flexBasis: 'calc(50% - 20px)', margin: '10px' }}>
+                        <div key={index} style={{ flexBasis: 'calc(50% - 30px)', margin: '10px', display: 'flex', justifyContent: 'center' }}>
                             <TimerComponent key={index} title={titles[index]} initTime={time} />
                         </div>
                     )
