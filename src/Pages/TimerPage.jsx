@@ -7,12 +7,14 @@ const TimerPage = () => {
     const titles = ['Easy', 'Not Easy', 'Getting Tough', 'Pros Only']
     return (
         <div>
-            <h1 style={{textAlign: 'center'}}>Don't let the timer win !!</h1>
+            <h1 style={{ textAlign: 'center' }}>Don't let the timer win !!</h1>
             <br></br><br></br>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '100px', justifyContent: 'center', alignItems: 'center' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
                 {times.map((time, index) => {
                     return (
-                        <TimerComponent key={index} title={titles[index]} initTime={time} />
+                        <div key={index} style={{ flexBasis: 'calc(50% - 20px)', margin: '10px' }}>
+                            <TimerComponent key={index} title={titles[index]} initTime={time} />
+                        </div>
                     )
                 })}
             </div>
