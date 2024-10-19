@@ -17,7 +17,7 @@ const HoverButton = ({ click, children }) => {
 
     useEffect(() => {
         let timer;
-        if (mouseOver == true) {
+        if (mouseOver === true) {
             timer = setTimeout(() => {
                 setMouseOverColor('lightpink');
                 setColor('blue');
