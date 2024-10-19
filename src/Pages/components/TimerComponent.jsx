@@ -19,6 +19,9 @@ const TimerComponent = (props) => {
         clearTimeout(timer.current);
         setStopped(true);
         setStarted(false);
+        setTimeout(() => {
+            setStopped(false);
+        }, 3000)
     }
 
     useEffect(() => {
@@ -29,7 +32,7 @@ const TimerComponent = (props) => {
         <div style={{ border: '1px solid red', padding: '30px', display: 'flex', flexDirection: 'column', gap: '20px', justifyContent: 'center', alignItems: 'center' }}>
             <h3>{title}</h3>
             <h4>{time} seconds</h4>
-            <h1>{(stopped == true && started == false) && (expired == false) ? "you won !!" : (started == false && stopped == true) && (expired == true) ? "you lost !!" : started == false || stopped == true ? "Info: Please run the timer" : "waiting...."}</h1>
+            <h1>{(stopped == true && started == false) && (expired == false) ? "you won !!" : (started == false && stopped == true) && (expired == true) ? "you lost !!" : (started == false && stopped==false) || started == false  ? "Info: Please run the timer" : "waiting...."}</h1>
             <button onClick={started ? handleStop : handleStart}>{(stopped || expired) || !started ? "Start" : "Stop"} Challenge</button>
         </div>
     )
